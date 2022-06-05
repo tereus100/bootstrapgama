@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+        <h1 class="text-center text-dark display-3 ">Pipoco do trovão</h1>
+        
+        <br>
+  <ul class="nav justify-content-center text-light bg-dark h-25">
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#">Gerenciamento de estoque</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#">Rastreio de Entregas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Logout</a>
+    </li>
+  </ul> <br>
+      </nav>
+      <div class="container col-sm-6">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+          
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Camisa</td>
+            <td>R$ 50,00</td>
+            <td>2</td>
+            <td><button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
+                 data-bs-target="#myModal1">Excluir</button></td>
+          </tr>
+          <tr>
+            <td>Tênis</td>
+            <td>R$ 230,00</td>
+            <td>1</td>
+            <td><button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
+                data-bs-target="#myModal1">Excluir</button></td>
+          </tr>
+          <tr>
+            <td>Calça</td>
+            <td>R$ 80,00</td>
+            <td>4</td>
+            <td><button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
+                data-bs-target="#myModal1">Excluir</button></td>
+          </tr>
+          
+        </tbody>
+      </table>
+      </div>
+    
+   <div class="container-fluid col-sm-4">
+    <button type="button" class="btn btn-outline-danger " data-bs-toggle="modal" 
+        data-bs-target="#myModal2">Ver produtos</button>
+    <button type="button" class="btn btn-outline-dark " data-bs-toggle="modal" 
+        data-bs-target="#myModal">Cadastrar novo produto</button></div>
+    
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+       
+        <div class="modal-header">
+          <h2 class="modal-title text-danger">Aproveite a oferta !</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        
+        <div class="modal-body">
+            <div class="container mt-3">
+                <h3>Cadastrar produtos</h3>
+                <form action="/action_page.php">
+                  <div class="mb-3 mt-3">
+                    <label for="email">Nome do produto:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Produto" name="email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="pwd">Preço:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Preço" name="pswd">
+                  </div>
+                  <div class="mb-3">
+                    <label for="pwd">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" min="0" max="100" step="1" value="0">
+                  </div>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Enviar</button>
+                </form>
+              </div>
+              
+        </div>
+  
+        
+        
+  
+      </div>
+    </div>
+  </div>
+  <!-- The Modal -->
+<div class="modal" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Produto</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="alert alert-danger">
+                <strong> Excluído com sucesso!</strong> 
+              </div>
+        </div>
+  
+       
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+  <div class="modal" id="myModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title text-danger">Veja os melhores produtos aqui</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+             
+          <!-- Modal body -->
+          <div class="d-flex flex-nowrap">
+          <div class="modal-body ">
+            <div class="d-flex  ">
+              <div class="cards p-3">
+                <h3>Camisas</h3>
+               <img src="imagens/camisas.png" width="100" height="100"/>
+               
+                </div>
+              <div class="cards p-3 ">
+              <h3>Tênis</h3>
+               <img src="imagens/tenis.png" width="100" height="100"/>
+              
+                </div>
+              <div class="cards p-3">
+              <h3>Calças</h3>
+               <img src="imagens/calcas.png" width="100" height="100"/>
+              
+                </div>
+          </div>
+    
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</html>
